@@ -4,51 +4,19 @@
 
 <head>
   <meta charset="utf-8">
-  <script type="text/javascript" src="scripts.js"></script>
   <title> Sign Up!</title>
-  <script src="scripts.js"> </script>
-  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-
-  </div>
-
-
-  <div id="details">
-
-    <table border="0">
-      <tr>
-        <td>Email Address: </td>
-        <td>
-          <form><input style="margin:30px;" type="input" id="input email" name="email"></form>
-        </td>
-      </tr>
-      <tr>
-        <td>Password:</td>
-        <td>
-          <form><input style="margin:30px;" type="password" id="input password" name="password"></form>
-        </td>
-      </tr>
-    </table>
-    </table>
-
-  </div>
-
-  <div id="submit">
-    <button onclick="create()" id="button">Create Account!</button>
-    <button onclick="login()" id="button"> Login! </button>
-  </div>
   <form>
     <label>Email address: </label>
-    <input style="margin:30px;" type="ema" id="email" name="email"> <br>
+    <input style="margin:30px;" type="input" id="email" name="email"> <br>
     <label>Password: </label>
     <input style="margin:30px;" type="password" id="password" name="password">
   </form>
 
-  <button id="create">Create Account!</button>
-  <button id="login"> Login! </button>
+  <button onclick="create()">Create Account!</button>
+  <button onclick="login()"> Login! </button>
   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -64,16 +32,10 @@
       appId: "1:1074662729499:web:b6c7226d42202777a355be",
       measurementId: "G-3H6ZNG3VB5"
     };
-    firebase.initializeApp(config);
+    firebase.initializeApp(firebaseConfig);
   </script>
-  <script>
-    document.getElementById("login").addEventListener("click", login);
-    document.getElementById("create").addEventListener("click", create);
-  </script>
-<<<<<<< HEAD
+  <script src="scripts.js"> </script>
 
-=======
->>>>>>> parent of 885608e... Added Firebase integration
 </body>
 
 </html>
