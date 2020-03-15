@@ -7,7 +7,28 @@
 
 <body> 
 	<p> Want to join us! Fear Not! <p>
-  <!--Insert Google Forms link here-->
+  <form>
+    <label> Full Name:</label>
+    <input style="margin:auto;" type="text" id="name" name="name"> <br>
+    <label> Email:</label>
+    <input type="text" id="email" name="email"> <br>
+    <label> Phone Number:</label>
+    <input type="text" id="phone" name="phone"> <br>
+    <label> PLEASE USE ONLY NUMBERS FOR THE PHONE NUMBER. </label> <br>
+    <label> Method of Delivery: </label>
+    <input type="text" id="method" name="method"> <br>
+  </form>
+  <button id="submit">Submit!</button>
+  
+  <p id = "info"> Info </p>
 </body>
 
 </html>
+
+<script>
+  document.getElementById("submit").addEventListener("click", myFunction);
+  function myFunction() {
+     var input = document.getElementById("name").value;
+     document.getElementById("info").innerHTML = input;
+  }
+</script>    
