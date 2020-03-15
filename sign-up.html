@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <title> Sign Up!</title>
 </head>
 
 <body> 
@@ -36,7 +37,11 @@
 <script>
   document.getElementById("submit").addEventListener("click", myFunction);
   function myFunction() {
-     var input = document.getElementById("name").value;
-     document.getElementById("info").innerHTML = input;
+     var name = document.getElementById("name").value;
+     document.getElementById("name").reset;
+     var email = document.getElementById("email").value;
+     var phone = document.getElementById("phone").value;
+     var method = document.getElementById("method").value;
+     document.getElementById("info").innerHTML = "Your information has been recorded!";
   }
 </script>    
