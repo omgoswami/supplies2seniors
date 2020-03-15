@@ -8,8 +8,8 @@ if (user) {
     // No user is signed in.
 }
 function login() {
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var email = document.getElementByName("email").value;
+    var password = document.getElementByName("password").value;
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -21,8 +21,8 @@ function login() {
 }
 
 function create() {
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var email = document.getElementByName("email").value;
+    var password = document.getElementByName("password").value;
     
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
