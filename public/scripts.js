@@ -34,3 +34,6 @@ function create() {
     });
     window.alert("CREATED.");
 }
+
+function logout() {
+}
