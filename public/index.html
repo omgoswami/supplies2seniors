@@ -4,6 +4,7 @@
 
 <head>
   <meta charset="utf-8">
+  <script type="text/javascript" src="scripts.js"></script>
   <title> Sign Up!</title>
   <script src="scripts.js"> </script>
   <link rel="stylesheet" href="styles.css">
@@ -11,17 +12,7 @@
 
 <body>
 
-  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
   </div>
 
 
@@ -49,6 +40,15 @@
     <button onclick="create()" id="button">Create Account!</button>
     <button onclick="login()" id="button"> Login! </button>
   </div>
+  <form>
+    <label>Email address: </label>
+    <input style="margin:30px;" type="ema" id="email" name="email"> <br>
+    <label>Password: </label>
+    <input style="margin:30px;" type="password" id="password" name="password">
+  </form>
+
+  <button id="create">Create Account!</button>
+  <button id="login"> Login! </button>
   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -64,9 +64,16 @@
       appId: "1:1074662729499:web:b6c7226d42202777a355be",
       measurementId: "G-3H6ZNG3VB5"
     };
-    firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(config);
   </script>
+  <script>
+    document.getElementById("login").addEventListener("click", login);
+    document.getElementById("create").addEventListener("click", create);
+  </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 885608e... Added Firebase integration
 </body>
 
 </html>
