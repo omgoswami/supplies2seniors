@@ -1,12 +1,4 @@
 
-//TEST USER SIGNED-IN?
-var user = firebase.auth().currentUser;
-
-if (user) {
-    // User is signed in.
-} else {
-    // No user is signed in.
-}
 function login() {
     var email = document.getElementByName("email").value;
     var password = document.getElementByName("password").value;
@@ -24,6 +16,8 @@ function create() {
     var email = document.getElementByName("email").value;
     var password = document.getElementByName("password").value;
     
+    window.alert(email + ";" + password);
+
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
