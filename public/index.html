@@ -5,18 +5,26 @@
 <head>
   <meta charset="utf-8">
   <title> Sign Up!</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <form>
-    <label>Email address: </label>
-    <input style="margin:30px;" type="input" id="email" name="email"> <br>
-    <label>Password: </label>
-    <input style="margin:30px;" type="password" id="password" name="password">
-  </form>
+  <table id="details">
+    <tr>
+      <td><label>Email address:</label></td>
+      <td><input type="input" id="email" name="email"></td>
+    </tr>
+    <tr>
+      <td><label>Password:</label></td>
+      <td><input type="password" id="password" name="password"></td>
+    </tr>
+  </table>
 
-  <button onclick="create()">Create Account!</button>
-  <button onclick="login()"> Login! </button>
+  <div id="submit">
+    <button onclick="create()">Create Account!</button>
+    <button onclick="login()"> Login! </button>
+  </div>
+
   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
