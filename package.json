@@ -1,0 +1,22 @@
+{
+  "name": "supplies2seniors",
+  "version": "1.0.0",
+  "description": "Help the seniors!",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AydanPirani/supplies2seniors.git"
+  },
+  "author": "Aydan Pirani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AydanPirani/supplies2seniors/issues"
+  },
+  "homepage": "https://github.com/AydanPirani/supplies2seniors#readme",
+  "dependencies": {
+    "firebase": "^7.11.0"
+  }
+}
