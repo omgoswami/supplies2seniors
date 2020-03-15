@@ -3,7 +3,7 @@
 var user = firebase.auth().currentUser;
 
 if (user) {
-    // User is signed in.
+    window.alert("Signed in.");
 } else {
     // No user is signed in.
 }
@@ -18,12 +18,14 @@ function login() {
 
         // ...
     });
+
 }
+
 
 function create() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-
+    location.replace("home.html");
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -32,5 +34,6 @@ function create() {
 
         // ...
     });
+
     window.alert("CREATED.");
 }
