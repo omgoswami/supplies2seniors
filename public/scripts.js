@@ -1,10 +1,10 @@
 function testLogin() {
+    
     //TEST USER SIGNED-IN?
     var user = firebase.auth().currentUser;
 
     if (user) {
         location.replace("logged_in.html");
-        window.alert(user.email);
     } else {
         // No user is signed in.
     }
