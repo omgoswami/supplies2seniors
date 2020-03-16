@@ -1,3 +1,6 @@
+function testLogin() {
+    //TEST USER SIGNED-IN?
+    var user = firebase.auth().currentUser;
 
 function testLogin() {
     //TEST USER SIGNED-IN?
@@ -8,9 +11,6 @@ function testLogin() {
         window.alert(user.email);
     } else {
         location.replace("login.html")
-        // No user is signed in.
-    }
-}
 
 //Login Function
 function login() {
@@ -24,13 +24,14 @@ function login() {
 
         // ...
     });
+    testLogin();
+
 }
 
 //Create Account Function
 function create() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -40,6 +41,7 @@ function create() {
         // ...
     });
     window.alert("CREATED: Please wait for admin approval.");
+    testLogin();
 }
 
 //Logout Function
@@ -53,4 +55,6 @@ function logout() {
              var errorMessage = error.message;
              window.alert("FAILED: " + errorMessage);
       });
+
+    testLogin();
 }
