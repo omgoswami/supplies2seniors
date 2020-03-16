@@ -39,7 +39,7 @@ function create() {
 
         // ...
     });
-    window.alert("CREATED.");
+    window.alert("CREATED: Please wait for admin approval.");
 }
 
 //Logout Function
