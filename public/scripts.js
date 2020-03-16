@@ -1,4 +1,5 @@
 function testLogin() {
+    
     //TEST USER SIGNED-IN?
     var user = firebase.auth().currentUser;
 
@@ -7,8 +8,7 @@ function testLogin() {
     var user = firebase.auth().currentUser;
 
     if (user) {
-        location.replace("loggedin.html");
-        window.alert(user.email);
+        location.replace("logged_in.html");
     } else {
         location.replace("login.html")
 
