@@ -12,14 +12,37 @@
 
   <div class="topnav" id="myTopnav">
     <a href="index.html" class="active">Home</a>
+    <a href="chatbot.html">News(INACTIVE)</a>
     <a href="chatbot.html">Talk to us!</a>
-    <a href="about">About Us</a>
-    <a href="create_login.html" style="float:right">login</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
+    <a href="about">About Us(INACTIVE)</a>
+    <a href="create_login.html" style="float:right">Login</a>
   </div>
 
+  <div style="align-items: center;">
+    <button id="center"> Order now!</button>
+  </div>
+
+  <script> 
+    document.getElementById("center").addEventListener("click",function(){
+      location.replace("order.html");
+    })
+  </script>
+
+  <style>
+    /* Refers to the button on the main screen */
+    #center {
+      min-width: 300px;
+      min-height: 100px;
+      margin-top: 650px;
+      margin-left: 1100px;
+      background-color: green;
+      border-radius: 18px;
+      border: 2px solid white;
+      font-size: 26px;
+      color: whitesmoke;
+      font-family: 'Noto Sans', sans-serif;
+    }
+  </style>
 </body>
 
 </html>
