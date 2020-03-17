@@ -20,16 +20,16 @@ function login() {
         // ...
     });
 
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(function() {
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(function () {
         // Existing and future Auth states are now persisted forever.
         // ...
         // New sign-in will be persisted with session persistence.
         return firebase.auth().signInWithEmailAndPassword(email, password);
-      }).catch(function(error) {
+    }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-      });
+    });
 
     testLogin();
 
@@ -56,23 +56,17 @@ function create() {
         // ...
     });
     window.alert("CREATED.");
-}
 
-//Geolocation API
-$.getJson("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgGmrdfq0CdLbPOQv5eDttby6uQCPeswo", function(data)) {
-  console.log(data);
-
-
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(function() {
-    // Existing and future Auth states are now persisted forever.
-    // ...
-    // New sign-in will be persisted with session persistence.
-    return firebase.auth().signInWithEmailAndPassword(email, password);
-  }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(function () {
+        // Existing and future Auth states are now persisted forever.
+        // ...
+        // New sign-in will be persisted with session persistence.
+        return firebase.auth().signInWithEmailAndPassword(email, password);
+    }).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+    });
     window.alert("CREATED: Please wait for admin approval.");
     testLogin();
 }
@@ -90,3 +84,8 @@ function logout() {
     });
 
     testLogin();
+}
+
+//Geolocation API
+$.getJson("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgGmrdfq0CdLbPOQv5eDttby6uQCPeswo", function(data)) {
+  console.log(data)};
