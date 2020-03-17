@@ -1,15 +1,74 @@
-<!doctype html>
+<!DOCTYPE HTML>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <style>
-
-  </style>
-
+  <title> Sign Up!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style = "background: url(https://slack-files.com/T0101QGNG93-F0101R78J5N-15b701e476)">
-</body>"
+    
+    <style>
+body {
+  background-image: url('https://wallpaperplay.com/walls/full/2/5/1/14019.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+    
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="home.html">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+<p>Aydan is here.</p>
+
+  <table id="details">
+    <tr>
+      <td><label>Email address:</label></td>
+      <td><input type="input" id="email" name="email"></td>
+    </tr>
+    <tr>
+      <td><label>Password:</label></td>
+      <td><input type="password" id="password" name="password"></td>
+        
+    </tr>
+  </table>
+
+  <div id="submit">
+    <button onclick="create()">Create Account! </button>
+    <button onclick="login()", onclick="location.href='supplies2seniors.web.app/loggedin'"
+    > Login! </button>
+  </div>
+  
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyAo-Dxsng50G-H71fn6umwIieUZkG87_M0",
+      authDomain: "supplies2seniors-26e2f.firebaseapp.com",
+      databaseURL: "https://supplies2seniors-26e2f.firebaseio.com",
+      projectId: "supplies2seniors-26e2f",
+      storageBucket: "supplies2seniors-26e2f.appspot.com",
+      messagingSenderId: "1074662729499",
+      appId: "1:1074662729499:web:b6c7226d42202777a355be",
+      measurementId: "G-3H6ZNG3VB5"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="scripts.js"> </script>
+
+</body>
 
 </html>
