@@ -1,5 +1,9 @@
 body {
     font-family: 'Noto Sans', sans-serif;
+      background-image: url('https://wallpaperplay.com/walls/full/2/5/1/14019.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;  
 }
 
 
