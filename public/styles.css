@@ -60,7 +60,7 @@ input {
     padding-top: 80px;
 }
 
-/* Refers to div that holds the buttons */
+/* Refers to div that holds the create_login buttons */
 #submit {
     width: max-content;
     margin-left: auto;
