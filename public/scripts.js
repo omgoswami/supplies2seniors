@@ -3,10 +3,6 @@ function testLogin() {
     //TEST USER SIGNED-IN?
     var user = firebase.auth().currentUser;
 
-
-    //TEST USER SIGNED-IN?
-    var user = firebase.auth().currentUser;
-
     if (user) {
         location.replace("logged_in.html");
     }
@@ -23,15 +19,35 @@ function login() {
 
         // ...
     });
+
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(function() {
+        // Existing and future Auth states are now persisted forever.
+        // ...
+        // New sign-in will be persisted with session persistence.
+        return firebase.auth().signInWithEmailAndPassword(email, password);
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+    
     testLogin();
 
 }
 
 //Create Account Function
 function create() {
+    var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+    var password1 = document.getElementById("password1").value;
+    var password2 = document.getElementById("password2").value;
+
+    if (password1 != password2) {
+        windows.alert("PASSWORDS DO NOT MATCH.");
+        return;
+    }
+
+    firebase.auth().createUserWithEmailAndPassword(email, password1).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -39,6 +55,17 @@ function create() {
 
         // ...
     });
+
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(function() {
+    // Existing and future Auth states are now persisted forever.
+    // ...
+    // New sign-in will be persisted with session persistence.
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
     window.alert("CREATED: Please wait for admin approval.");
     testLogin();
 }
