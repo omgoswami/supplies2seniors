@@ -19,18 +19,6 @@ function login() {
 
         // ...
     });
-
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(function () {
-        // Existing and future Auth states are now persisted forever.
-        // ...
-        // New sign-in will be persisted with session persistence.
-        return firebase.auth().signInWithEmailAndPassword(email, password);
-    }).catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-    });
-
     testLogin();
 
 }
@@ -55,18 +43,6 @@ function create() {
 
         // ...
     });
-    window.alert("CREATED.");
-
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(function () {
-        // Existing and future Auth states are now persisted forever.
-        // ...
-        // New sign-in will be persisted with session persistence.
-        return firebase.auth().signInWithEmailAndPassword(email, password);
-    }).catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-    });
     window.alert("CREATED: Please wait for admin approval.");
     testLogin();
 }
@@ -87,5 +63,11 @@ function logout() {
 }
 
 //Geolocation API
+<<<<<<< HEAD
+$.getJson("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgGmrdfq0CdLbPOQv5eDttby6uQCPeswo", function(data){
+  console.log(data)
+});
+=======
 /*$.getJson("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgGmrdfq0CdLbPOQv5eDttby6uQCPeswo", function(data)) {
   console.log(data)}; */
+>>>>>>> 3d63a051a786a8034b3e8b504c8b2eadf8ad29b3
