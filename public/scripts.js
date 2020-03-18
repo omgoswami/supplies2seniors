@@ -87,5 +87,5 @@ function logout() {
 }
 
 //Geolocation API
-$.getJson("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgGmrdfq0CdLbPOQv5eDttby6uQCPeswo", function(data)) {
-  console.log(data)};
+/*$.getJson("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgGmrdfq0CdLbPOQv5eDttby6uQCPeswo", function(data)) {
+  console.log(data)}; */
