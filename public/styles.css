@@ -76,3 +76,11 @@ button {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+    background-image: url('https://slack-files.com/T0101QGNG93-FVCP8HZTM-59d4818008');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;  
+}

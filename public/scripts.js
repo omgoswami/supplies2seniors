@@ -63,11 +63,5 @@ function logout() {
 }
 
 //Geolocation API
-<<<<<<< HEAD
-$.getJson("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgGmrdfq0CdLbPOQv5eDttby6uQCPeswo", function(data){
-  console.log(data)
-});
-=======
 /*$.getJson("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDgGmrdfq0CdLbPOQv5eDttby6uQCPeswo", function(data)) {
   console.log(data)}; */
->>>>>>> 3d63a051a786a8034b3e8b504c8b2eadf8ad29b3
