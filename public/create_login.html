@@ -5,30 +5,19 @@
 <head>
   <meta charset="utf-8">
   <title> Sign Up!</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="scripts.js"> </script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-    
-    <style>
-body {
-  background-image: url('https://wallpaperplay.com/walls/full/2/5/1/14019.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
-</style>
-    
 <body>
   <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Home</a>
-    <a href="home.html">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
+    <a href="index.html">Home</a>
+    <a href="chatbot.html">News(INACTIVE)</a>
+    <a href="chatbot.html" >Talk to us!</a>
+    <a href="about">About Us(INACTIVE)</a>
+    <a href="create_login.html" style="float:right" class="active">Login</a>
+  </div>        
 
   <table id="details">
     <tr>
@@ -38,15 +27,21 @@ body {
     <tr>
       <td><label>Password:</label></td>
       <td><input type="password" id="password" name="password"></td>
-        
+
     </tr>
   </table>
 
   <div id="submit">
-    <button onclick="create()" onclick="location.href='finish_creating.html'"> Create Account! </button>
-    <button onclick="login()" onclick="location.href='logged_in.html'"> Login! </button>
+    <button onclick="login()"> Login! </button>
   </div>
   
+
+  <div id="submit">
+    <label>Click</label>
+    <button style="margin: 0px;" onclick="location.href='create_account.html'">HERE </button>
+    <label>to create an account!</label>
+  </div>
+
   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -64,10 +59,14 @@ body {
     };
     firebase.initializeApp(firebaseConfig);
   </script>
-  <script src="scripts.js"> </script>
 
+  <script>
+    window.addEventListener("load", function () {
+      if (firebase.auth().currentUser) {
+        location.replace("logged_in.html");
+      }
+    });
+  </script>
 </body>
 
 </html>
-
-

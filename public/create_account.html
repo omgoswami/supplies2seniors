@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Sign Up!</title>
+    <script src="scripts.js"> </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="chatbot.html">News(INACTIVE)</a>
+        <a href="chatbot.html">Talk to us!</a>
+        <a href="about">About Us(INACTIVE)</a>
+        <a href="create_login.html" style="float:right">Login</a>
+    </div>
+
+    <table id="details">
+        <tr>
+            <td><label>Full Name:</label></td>
+            <td><input type="input" id="name" name="name"></td>
+        </tr>
+        <tr>
+            <td><label>Email address:</label></td>
+            <td><input type="input" id="email" name="email"></td>
+        </tr>
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password" id="password1" name="password1"></td>
+        </tr>
+        <tr>
+            <td><label>Confirm Password:</label></td>
+            <td><input type="password" id="password2" name="password2"></td>
+        </tr>
+    </table>
+
+    <div id="submit">
+        <button onclick="create()"> Create! </button>
+    </div>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyAo-Dxsng50G-H71fn6umwIieUZkG87_M0",
+            authDomain: "supplies2seniors-26e2f.firebaseapp.com",
+            databaseURL: "https://supplies2seniors-26e2f.firebaseio.com",
+            projectId: "supplies2seniors-26e2f",
+            storageBucket: "supplies2seniors-26e2f.appspot.com",
+            messagingSenderId: "1074662729499",
+            appId: "1:1074662729499:web:b6c7226d42202777a355be",
+            measurementId: "G-3H6ZNG3VB5"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</body>
+
+</html>
