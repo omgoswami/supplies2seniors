@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <header id="hdr">testlogin</header>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+                /* Create two equal columns that floats next to each other */
+            @media screen and (min-width: 650px) {
+                .column {
+                    float: left;
+                    width: 50%;
+                    padding: 50px;
+                }
+            
+                /* Clear floats after the columns */
+                .row:after {
+                     content: "";
+                    display: table;
+                    clear: both;
+                }
+            }
+        </style>
     </head>
     <body>
-        <button onclick="create()">Create Account!</button>
-        <button onclick="login()"> Login! </button>
-        <button onclick="logout()"> Logout!</button>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="chatbot.html">News(INACTIVE)</a>
+            <a href="chatbot.html" class="active">Talk to us!</a>
+            <a href="about">About Us(INACTIVE)</a>
+            <a href="create_login.html" style="float:right" onlick="logout()"> Logout</a>
+        </div>
+
+
+        <div class="row">
+            <div class="column">
+                <h1> Log Hours </h1>
+                <button onclick="location.href='https://forms.gle/8qwV3vPKDUidarBB8'"> Complete Your Order </button>
+                <p></p>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdGL-1z5L2KA9CFPmSv9XFSjlUpYAqsupowMTPzC8DncCKcA/viewform?embedded=true" 
+                width="600" 
+                height="1200" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0"> Loading…</iframe>
+          </div>
+          
+    
+          <div class="row">
+              <div class = "column">
+            <h1> Orders </h1>
+                <iframe  
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    width = "600"
+                    height = "1200"
+                    src = "https://docs.google.com/spreadsheets/d/1l2ZeAOqlaIeANhtITvhUyPoetAwX0uCgGlunWOUww9c/edit?usp=sharing">
+                </iframe>
+         </div>
+
     </body>
 </html>

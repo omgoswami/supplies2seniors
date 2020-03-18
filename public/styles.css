@@ -2,7 +2,7 @@
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #848080;
+  background-color: #61cbeb;
   overflow: hidden;
 }
 
@@ -10,7 +10,7 @@
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #ffffff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -19,13 +19,13 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(152, 203, 219);
   color: black;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #449DD1;
+  background-color: rgb(29, 138, 201);
   color: white;
 }
 
