@@ -2,7 +2,7 @@
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #61cbeb;
+  background-color: #ffffff;
   overflow: hidden;
 }
 
@@ -10,7 +10,7 @@
 .topnav a {
   float: left;
   display: block;
-  color: #ffffff;
+  color: rgb(29, 138, 201);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -25,8 +25,8 @@
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: rgb(29, 138, 201);
-  color: white;
+  background-color:rgb(152, 203, 219);
+  color: black;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -77,9 +77,10 @@ button {
   margin-right: 20px;
 }
 
+
 body {
   font-family: 'Noto Sans', sans-serif;
-    background-image: url('c57d9b77-59ff-4186-a9b2-5479a4970f9c.jpeg');
+    background-image: url('background.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;  
