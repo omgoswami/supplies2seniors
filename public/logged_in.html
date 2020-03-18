@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <header id="hdr">testlogin</header>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <button onclick="create()">Create Account!</button>
-        <button onclick="login()"> Login! </button>
-        <button onclick="logout()"> Logout!</button>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="home.html">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a href="create_login.html" onlick = "logout()"> Log Out </a>
+        </div>
+
+
+        <div class="row">
+            <div class="column">
+                <h1> Your Hours </h1>
+                <button onclick ="location.href='account_directions.html'"> Setting Up Your Spreadsheet </button>
+                <button onclick= "addSpreadsheet()"> Add New Spreadsheet </button>
+                <button onlick="location.href='https://forms.gle/Kenh1VpWrkWiSnNh6'"> Complete Your Order </button>
+                <script>
+                    function addSpreadsheet() {
+                        
+                    }
+                </script>
+            </div>
+                
+            <div class="column">
+                <h1> Log Hours </h1>
+                <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfdGL-1z5L2KA9CFPmSv9XFSjlUpYAqsupowMTPzC8DncCKcA/viewform?embedded=true" 
+                width="640" 
+                height="1000" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">Loading…</iframe>
+
+            </div>
+          </div>
+          
+          <p> ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– </p>
+          <div class="row">
+            <h1> Orders </h1>
+                <iframe  
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    width = "1300px"
+                    height = "600px"
+                    src = "https://docs.google.com/spreadsheets/d/1l2ZeAOqlaIeANhtITvhUyPoetAwX0uCgGlunWOUww9c/edit?usp=sharing">
+                </iframe>
+         </div>
+
     </body>
 </html>
