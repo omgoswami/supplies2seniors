@@ -3,6 +3,27 @@
     <head>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+                /* Create two equal columns that floats next to each other */
+            @media screen and (min-width: 650px) {
+                .column {
+                    float: left;
+                    width: 50%;
+                    padding: 50px;
+                }
+            
+                /* Clear floats after the columns */
+                .row:after {
+                     content: "";
+                    display: table;
+                    clear: both;
+                }
+            }
+        </style>
     </head>
     <body>
         <div class="topnav" id="myTopnav">
@@ -14,36 +35,39 @@
               <i class="fa fa-bars"></i>
             </a>
             <a href="create_login.html" onlick = "logout()"> Log Out </a>
+            <a onlick="location.href='https://forms.gle/Kenh1VpWrkWiSnNh6'"> Complete Order </a>
         </div>
 
 
         <div class="row">
             <div class="column">
                 <h1> Your Hours </h1>
-                <button onclick ="location.href='account_directions.html'"> Setting Up Your Spreadsheet </button>
-                <button onclick= "addSpreadsheet()"> Add New Spreadsheet </button>
                 <button onlick="location.href='https://forms.gle/Kenh1VpWrkWiSnNh6'"> Complete Your Order </button>
-                <script>
-                    function addSpreadsheet() {
-                        
-                    }
-                </script>
+                <p></p>
+                <iframe 
+                src="https://docs.google.com/spreadsheets/d/1RJxkV3cYPbDae2HA8LnJGyU5Cwi8-IA7g7q-5nhLtkc/edit?usp=sharing" 
+                width="600" 
+                height="1000" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">Loading…</iframe>
             </div>
                 
             <div class="column">
                 <h1> Log Hours </h1>
                 <iframe 
                 src="https://docs.google.com/forms/d/e/1FAIpQLSfdGL-1z5L2KA9CFPmSv9XFSjlUpYAqsupowMTPzC8DncCKcA/viewform?embedded=true" 
-                width="640" 
+                width="600" 
                 height="1000" 
                 frameborder="0" 
                 marginheight="0" 
-                marginwidth="0">Loading…</iframe>
+                marginwidth="0">Loading…
+            </iframe>
 
             </div>
           </div>
           
-          <p> ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– </p>
+          <p> –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– </p>
           <div class="row">
             <h1> Orders </h1>
                 <iframe  
