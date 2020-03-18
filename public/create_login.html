@@ -60,6 +60,17 @@
     firebase.initializeApp(firebaseConfig);
   </script>
 
+  <script>
+    window.addEventListener("load", function () {
+      window.alert("INSIDE FUNCTION NOW.");
+      if (firebase.auth().currentUser) {
+        window.alert("LOGGED IN.");
+        location.replace("logged_in.html");
+      } else {
+        window.alert("USER DOESN'T EXIST");
+      }
+    });
+  </script>
 </body>
 
 </html>
