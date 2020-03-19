@@ -2,7 +2,6 @@ function testLogin() {
 
     //TEST USER SIGNED-IN?
     var user = firebase.auth().currentUser;
-    window.alert(user.email);
     if (user) {
         location.replace("logged_in.html");
     }
